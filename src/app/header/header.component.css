@@ -1,0 +1,40 @@
+
+/* .navbar-custom{
+    background-color: rgb(94, 64, 229);
+} */
+
+.jumbotron-fluid{
+    margin-bottom: 0;
+}
+.d-block{
+    height:350px ;
+}
+.jumbotron {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+a{
+    color: rgb(244, 143, 66);
+    font-family: fantasy;
+}
+h3{
+    color:rgb(15, 28, 206);
+}
+
+p-megaMenu >>> .ui-megamenu-root-list {
+    /* overflow: hidden; */
+    padding-left: 200px;
+}
+
+p-megaMenu >>> .ui-megamenu-horizontal .ui-megamenu-root-list>.ui-menuitem {
+    display: inline-flex;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    /* overflow: hidden; */
+    z-index: 10;
+    width: 100%;
+  }
+

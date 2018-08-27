@@ -1,0 +1,14 @@
+<figure class="col col-sm-6 col-md-4 col-lg-3">
+  <!-- <a href="#">
+      <img alt="picture" src="{{ city.imagePath }}" class="img-thumbnail">
+  </a> -->
+  <div class="thumbnail">
+      <a  (click)="onSelect(house)" style="cursor: pointer;">
+          <img src="{{ house.imagePath }}" alt="Lights" class="img-thumbnail">
+          <div class="caption">
+            <p>{{ house.description }} / {{ house.price }}</p>
+          </div>
+      </a>
+    </div>
+</figure>
+

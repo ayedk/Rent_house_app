@@ -1,0 +1,11 @@
+figure{
+    display: inline-block;
+}
+.caption{
+    background-color: white;
+    color: black;
+}
+img{
+    width: 330px;
+    height: 300px;
+}

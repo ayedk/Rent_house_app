@@ -1,0 +1,21 @@
+
+        <img src="{{ house.imagePath }}" class="img-thumbnail w-100" alt="Responsive image">
+
+
+    <hr>
+    <h1> Title: {{ house.title }}</h1>
+    <h1> Price: {{ house.price }}</h1>
+    <h1> Date of Post: {{ house.date_post }}</h1>
+    <h1>Description:</h1>
+    <p>{{ house.description }}</p>
+    <hr>
+    <h1>Rooms:</h1>
+    <p>{{ house.rooms[1].name }}: {{ house.rooms[1].description }}</p>
+    <p>{{ house.rooms[2].name }}: {{ house.rooms[2].description }}</p>
+    <p>{{ house.rooms[3].name }}: {{ house.rooms[3].description }}</p>
+    <hr>
+    <p>{{ house.adress }}</p>
+    <h1>Google Maps:</h1>
+    <hr>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25537.20697103567!2d10.1543065!3d36.8628074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd335173875caf%3A0x988319e101e8c90d!2sTunis+Grand+Hotel!5e0!3m2!1sen!2stn!4v1534345627289" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="{{ house.map }}" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>

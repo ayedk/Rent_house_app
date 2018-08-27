@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" routerLink="/">
+      <img src="https://images.pexels.com/photos/955793/pexels-photo-955793.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Rent Your House</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+    <span ><i class="fa fa-navicon" style="font-size:24px;color:rgb(244, 143, 66);"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Home<span class="sr-only">(current)</span></a>
+    </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <ng-template [ngIf]="!authService.isAuthenticated()">
+            <li class="nav-item ">
+                <a routerLink="/signup" class="nav-link" >SignUp</a>
+            </li>
+            <li class="nav-item ">
+                <a routerLink="/signin" class="nav-link" >Login</a>
+            </li>
+        </ng-template>
+        <li class="nav-item">
+          <a class="nav-link"
+          (click)="onLogout()"
+          *ngIf="authService.isAuthenticated()"
+          style="cursor: pointer;">Logout
+          </a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="https://images.pexels.com/photos/276511/pexels-photo-276511.jpeg" alt="Rent Your House">
+                <div class="carousel-caption ">
+                  <h3>Rent Your House</h3>
+                  <p>...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg" alt="Rent Your House">
+                <div class="carousel-caption ">
+                  <h3>Rent Your House</h3>
+                  <p>...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" alt="Rent Your House">
+                <div class="carousel-caption ">
+                  <h3>Rent Your House</h3>
+                  <p>...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  </div>
+
+
+<div #stickyMenu [class.sticky] = "sticky" >
+    <p-megaMenu [model]="items" >
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <button pButton type="button" label="Search"></button>
+            <input type="text" pInputText placeholder="Keyword">
+        </div>
+      </div>
+    </p-megaMenu>
+</div>
